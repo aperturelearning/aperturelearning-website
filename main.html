@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aperture Learning — SACE Tutoring in Adelaide</title>
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400&amp;display=swap">
+<style>
+:root{--bg:#000;--panel:#0a0d12;--line:#1b2330;--text:#e9eef5;--mute:#8d99ab;--blue:#2aa4ff;--blue2:#0b5fff;--orange:#ff8a1f;
+--serif:Cambria,Caladea,Georgia,"Times New Roman",serif;--sans:Cambria,Caladea,Georgia,"Times New Roman",serif;--mono:var(--serif);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:7px;font-family:Cambria,Caladea,Georgia,"Times New Roman",serif;font-size:21px;font-weight:400;letter-spacing:.01em}
+.brand img{width:34px;height:34px;border-radius:6px}
+.links{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--mute)}
+.links a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px;border:1.5px solid var(--orange);background:var(--orange);color:#000;transition:.2s;cursor:pointer;font-family:var(--sans)}
+.btn:hover{background:transparent;color:var(--orange);box-shadow:0 0 28px rgba(255,138,31,.35)}
+.btn.ghost{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn.ghost:hover{background:var(--blue);color:#000;box-shadow:0 0 28px rgba(42,164,255,.4)}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;padding-top:110px;padding-bottom:120px;min-height:620px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-family:var(--mono);font-size:16px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+h1{font-family:var(--sans);font-weight:500;font-size:clamp(40px,7vw,78px);line-height:1.05;margin:0 0 24px;max-width:14ch;letter-spacing:-.01em}
+h1 em{color:var(--blue);font-style:italic}
+.lede{max-width:52ch;color:var(--mute);font-size:19px;margin:0 0 36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4.5vw,46px);margin:0 0 14px;line-height:1.15}
+h2 em{color:var(--blue)}
+.sub{color:var(--mute);max-width:56ch;margin:0 0 52px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;transition:.25s;position:relative}
+.card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 8px 40px rgba(42,164,255,.12)}
+.card .tag{font-family:var(--serif);font-size:15px;color:var(--orange);margin-bottom:14px;display:block}
+.card h3{margin:0 0 8px;font-size:20px;font-weight:600}
+.card p{margin:0;color:var(--mute);font-size:15.5px}
+.price{font-family:var(--serif);font-size:30px;color:var(--orange);margin:0 0 10px;display:block;line-height:1.2}.price small{font-size:14px;color:var(--mute);font-family:var(--sans)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chips span{font-family:var(--mono);font-size:14px;color:var(--blue);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+.eq{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--blue);margin-bottom:16px;display:block;min-height:34px}
+.steps{counter-reset:s;display:grid;gap:0}
+.step{display:grid;grid-template-columns:72px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);color:var(--orange);font-size:22px}
+.step h3{margin:0 0 6px;font-family:var(--serif);font-weight:500;font-size:26px}
+.step p{margin:0;color:var(--mute);max-width:60ch}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.4vw,36px);line-height:1.35;max-width:26ch}
+.quote b{color:var(--orange);font-weight:500}
+form{display:grid;gap:14px;max-width:560px}
+label{font-family:var(--mono);font-size:14px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase;display:grid;gap:6px}
+input,select,textarea{background:var(--panel);border:1px solid var(--line);color:var(--text);padding:13px 14px;border-radius:10px;font:inherit;font-size:16px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(42,164,255,.18)}
+.slogan{font-size:28px;color:#fff;max-width:none}.slogan em{font-style:italic}.slogan .o{color:var(--orange)}.slogan .b{color:var(--blue)}
+.fbrand{display:flex;align-items:center;gap:12px}
+.flogo{width:68px;height:68px}
+.ftxt{display:flex;flex-direction:column;gap:2px}
+.fname{font-family:var(--serif);font-size:30px;color:#d9dee6;line-height:1.2}
+.fslogan{font-family:var(--serif);font-size:20px;color:#fff;line-height:1.3}
+.fslogan em{font-style:italic}.fslogan .o{color:var(--orange)}.fslogan .b{color:var(--blue)}
+footer{padding:40px 0 60px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:720px){.links a:not(.btn){display:none}.step{grid-template-columns:48px 1fr}.hero .wrap{padding-top:70px;min-height:560px}section{padding:68px 0}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top"><img src="data:image/png;base64,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" alt="Aperture Learning logo">Aperture Learning</a>
+  <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#subjects">Subjects</a><a href="#tutors">Tutors</a><a class="btn" href="#contact" style="padding:9px 20px">Book a session</a></div>
+</div></nav>
+
+<header class="hero" id="top">
+  <canvas id="cv" aria-hidden="true"></canvas>
+  <div class="wrap">
+    
+    <h1>Open the <em>aperture</em> on hard problems.</h1>
+    <p class="lede">Welcome to Aperture Learning!</p>
+    <div class="cta"><a class="btn" href="#contact">Book a free intro</a><a class="btn ghost" href="#services">Our services</a></div>
+  </div>
+</header>
+
+<section id="about"><div class="wrap">
+  <h2 class="reveal">About <em>us</em></h2>
+  <p class="lede reveal">At Aperture Learning, we’re an Adelaide-based tutoring service passionate about helping students build confidence, strengthen their understanding and achieve their academic goals. Founded by recent high-achieving SACE graduates, we offer personalised tutoring in SACE mathematics and science subjects, as well as Years 7-10 mathematics. Through one-on-one and small-group sessions, available in person across Adelaide and online, we provide supportive, engaging and tailored learning experiences that help every student reach their full potential.</p>
+  <p class="lede slogan reveal" style="margin-bottom:0"><em class="o">clarity</em> in <em class="b">every concept</em></p>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <h2 class="reveal">Services &amp; <em>pricing</em></h2>
+  <p class="sub reveal">Pick the format that fits how you learn and where you’re at in the year. All prices include GST.</p>
+  <div class="grid">
+    <div class="card reveal"><h3>One-on-one (online)</h3><span class="price">$30/hour<small> per student</small></span><p>Private sessions on Google Meet for Years 7-10 and SACE students.</p></div>
+    <div class="card reveal"><h3>One-on-one (in person)</h3><span class="price">$40/hour<small> per student</small></span><p>Private sessions at a location that suits you, for Years 7-10 and SACE students.</p></div>
+    <div class="card reveal"><h3>Group sessions</h3><span class="price">$25/hour<small> per student</small></span><p>Small groups of 4-6 students at a location that suits you, for Years 7-10 and SACE.</p></div>
+    <div class="card reveal"><h3>Holiday workshops</h3><span class="price">Free<small> for enrolled students</small></span><p>Six-hour group workshops over the school holidays for SACE students.</p></div>
+    <div class="card reveal"><h3>SACE exam preparation course</h3><span class="price">$300<small> per student</small></span><p>Weekly in-person multi-student classes over 3 weeks for SACE Stage 2, offered in Term 4 only.</p></div>
+  </div>
+</div></section>
+
+<section id="subjects"><div class="wrap">
+  <h2 class="reveal">Subjects</h2>
+  <p class="sub reveal">SACE subjects and Years 7-10 Mathematics, taught from first principles.</p>
+  <div class="grid">
+    <div class="card reveal"><span class="tag">SACE (Stage 1 &amp; 2)</span><h3>Mathematical Methods</h3><p>Calculus, functions, probability and statistics, taught so the formulas feel inevitable.</p></div>
+    <div class="card reveal"><span class="tag">SACE (Stage 1 &amp; 2)</span><h3>Physics</h3><p>From motion and fields to light and matter, with the reasoning behind every equation.</p></div>
+    <div class="card reveal"><span class="tag">SACE (Stage 1 &amp; 2)</span><h3>Specialist Mathematics</h3><p>Complex numbers, vectors, proof and calculus, built up one idea at a time.</p></div>
+    <div class="card reveal"><span class="tag">SACE (Stage 1 &amp; 2)</span><h3>Chemistry</h3><p>Reactions, equilibrium and quantitative problems explained from the particle level up.</p></div>
+    <div class="card reveal"><span class="tag">SACE (Stage 1 &amp; 2)</span><h3>Biology</h3><p>Cells, genetics and ecosystems, linking processes together rather than memorising lists.</p></div>
+    <div class="card reveal"><span class="tag">Years 7-10</span><h3>Mathematics</h3><p>Strong foundations so senior subjects feel like a natural next step.</p></div>
+  </div>
+</div></section>
+
+<section id="tutors"><div class="wrap">
+  <h2 class="reveal">Meet our <em>tutors</em></h2>
+  <p class="sub reveal">We are recent high-achieving SACE graduates.</p>
+  <div class="grid">
+    <div class="card reveal"><h3>Thanvanth</h3><div class="chips"><span>SACE Methods</span><span>SACE Physics</span><span>SACE Chemistry</span><span>Yr 7-10 Maths</span></div></div>
+    <div class="card reveal"><h3>Alex</h3><div class="chips"><span>SACE Methods</span><span>SACE Physics</span><span>Yr 7-10 Maths</span></div></div>
+    <div class="card reveal"><h3>Naoki</h3><div class="chips"><span>SACE Specialist Maths</span><span>Yr 7-10 Maths</span></div></div>
+    <div class="card reveal"><h3>Chanithu</h3><div class="chips"><span>SACE Methods</span><span>SACE Specialist Maths</span><span>Yr 7-10 Maths</span></div></div>
+    <div class="card reveal"><h3>Mohammad</h3><div class="chips"><span>SACE Biology</span><span>Yr 7-10 Maths</span></div></div>
+    <div class="card reveal"><h3>Muhammad</h3><div class="chips"><span>SACE Methods</span><span>SACE Physics</span><span>SACE Chemistry</span><span>Yr 7-10 Maths</span></div></div>
+    
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2 class="reveal">Let’s <em>talk</em></h2>
+  <p class="sub reveal">Tell us a bit about what you’re working on and we’ll get back to you to arrange a free intro session.</p>
+  <form id="f" class="reveal">
+    <label>Name<input name="n" required autocomplete="name"></label>
+    <label>Year level<select name="y"><option>Years 7-10</option><option>Year 11</option><option>Year 12</option></select></label>
+    <label>Subject<select name="s"><option>SACE Mathematical Methods</option><option>SACE Specialist Mathematics</option><option>SACE Physics</option><option>SACE Chemistry</option><option>SACE Biology</option><option>Years 7-10 Maths</option></select></label>
+    <label>Message<textarea name="m" rows="4" placeholder="What would you like help with?"></textarea></label>
+    <button class="btn" type="submit">Send enquiry</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span class="fbrand"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAFACAYAAADNkKWqAAAACXBIWXMAABYlAAAWJQFJUiTwAAANwElEQVR4nO3dYW7bSBZF4efG7Cv0ymSvTMrKPD8cdycxE1MiWa+q3neAA2SCjnXJkQ5oyZaeIuItAKAg/2QPAIAsBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEEBZBBBAWQQQQFkEEGVZliUul0v2DCTzRlbyer2+/c7lcknfxRTTB5DNvFwun+L3wfV6Td/H5qYPIJv4t/i5Eqyp5wAn5OO5Lc9v/cqyLIf8N5iL9ArzGP90heOq5t0t+Da4nOkDeIDLsnhgf+FWsneyqekDeIBrr2yK4K8KIFdMH8CdfnX1J4LvCiB/14sgxViWJa7Xa/YMoAsEsCAiCLwjgBNwu93idrvd9W9EEIh4ivfvhTEB709f3cftdovn5+cT1vTH1vPz9PR08hL0givAiXh5ebn737gSRHXSX4nhcW75da+qrw57FZgrpg/gwYrgugLIFdMH8ARF8LMCyBXTB/AkRfBXBZArpg/giYrgfwogV0wfwJMVwXcFkCumD2ADRVAAuWr6ADayegQFkCumD2BDK0dQALli+gA2tmoEBZArpg9gghUjKIBcMX0Ak6wWQQHkiukDmGilCAogV0wfwGSrRFAAuWL6AHZghQgKIFdMH8BOnD2CAsgV0wewI2eOoAByxfQB7MxZIyiAXDF9ADt0xggKIFdMH8BOnS2CAsgV0wewY2eKoAByxfQB7NxZIiiAXDF9AAdwhggKIFdMH8BBHD2CAsgV0wdwIEeOoAByxfQBHMxRIyiAXDF9AAd0xAgKIFdMH8BBHS2CAsgV0wdwYEeKoAByxfQBHNxRIiiAXDF9ACdwhAgKIFdMH8BJ7D2CAsgV0wdwInuOoAByxfQBnMxeIyiAXDF9ACe0xwgKIFdMH8BJ7S2ClQK4LEv6hkFMH8CJ7SmCswdwWZa36/X66TxeLpf0bR2bPoCT20sEZw7gV+fYFeEfTR/AAvYQwVkDuOXcZr8RRcemD2ARsyM4YwDvOae+FV41fQALmRnBrWSfo7POpQCumj6AxcyK4Fayz89Z51AAV00fwIJmRHAr2efmrHPnhZBV0wewqK0juJXs83LGOXP190fTB7CwLSO4lexz0sO5KmT6gG5c+0FS9Mu9D+ytZN8P1xS/00wf0IXCNyb3PMC3kn1f/F3xO9X0Aek+egdDH2x9oG8l+/54xH1T/DabPiDVZVkeuoOhL7Y84LeSfZ/8UPzO958AJmBZlrher9kzDuNyucTLy8vd/+52u8Xz8/PxgyZFADENs0RQ/NohgJiK0SMofu1J/z48Wy+CzMfa82BbGe1+6Dm/XaYP6EI/BjMfv4dhKxn3P/FLM31AN14uF1eDk/FzILaScb/be2x8zKcffwB+4Xq9xrIsh3yt2+0WERGvr6+f/u6Dj9v69u3bv//7yNt/fn6O97Z9zdPT0yG3uwXP+eWTXmH25RFPB1yv10PefeSoq/J7jqnVeXbl14XpA9iRe+N3VPjWbPX0RIvzLH7dmD6AnbgnfmeG73fPDmGv+8XvFNMHsAMfjV/L8P3smRHscbf4nWb6ACa7J37Z288IYW9bezjPE5s+gIk+Gr+e3mH46Aj2tFH8Tjd9AJOcIX4fHhnBXraJXxPTBzDBmeL34VER7GGT+DUzfQAbO2P8PjwigtlbxK+p6QPY0Jnj9+HeCGZuEL/mpg9gI/f8nF/29pGOVfyGMn0AG7gnCCNd/X2456MO9tyu+A1n+gCebLX47T3uR29P/IY0fQBPdO/v9mbv3+OjV4GP3Jb4DWv6AJ7k3viNfPW35xzcexviN7TpA3iCR7ylVfYxHOEjV4H3fH3xG970ATzYI+I3w9Xfo+dj69cVvylMH8ADPeqzTWYK4L1XgVu+pvhNY/oAHuSRH+yUfSxHe+Sxi99Upg/gAR4ZvxkfqEe9Jb74zaUPRp+AIz/AKOLzBxbhHR9gNCfpFebjnvF5xjM9//fhPc8Drv17V37Tmj6AD3rWh7lnvMX92e4JoPhNbfoAPuBZ8Xt7m+8FkIjHAyh+05s+gHd6Zvze3uYMYMT2V4I//nvxK2H6AN7hnvfz20r2MZ7lPccvfmVMH8CN7n0z061kH+dZ3nO+HkH8hjR9ADd4xDs5byX7WM/yTMRvWNMH8AuPehv7rcz4KvA9x38v4je06QP4F4/8DI+tzBjAPe8Q/TfEb2z9JkjHPPobHi8vL/H6+nr8oIH59u3b4V/Tb3jMQXqF+dkzPr2t8lXNkR+cPus5Kmr6AP7mWR9dWfnB7c0i+AfTB/Anz/zc3nvIPg9HexTiN53pA/jDsz+0/B5meiHkqG9/xW9K0wcwzo9fxH0BnOnBfkQAZzof/MX0AeVtEb+I+78NnOUqcC/iN7XpA0rbKn4R94dghgf+3qu/Gc4B/2r6gLK2jF/EY1dCo18F7kH8Spg+oKSt4xfxWAxGjsCeq7+Rj5t3mT6gnBnxi3j8amjEq0Dx40bTB5QyK34RjwdwxCBUOlbuMn1AGTPjF7Hv+bCRPijJ+/nxDtMHlDA7fhH7fxxkhAiKH+80fcD09hC/iGN+HaznCIofHzB9wNT2Er+I434ftscIih8fNH3AtPYUv4hj3xG5pwiKH3eYPmBKe4tfxPFvCd9DBMWPO00fMJ09xi/ivM/EyAjhsiwPn2fx40+mD5jKXuMXce6norWK4J7wvb2JHz+ZPmAae45fxLkBPPtY9obv7U38uGr6gCnsPX4R970l/l4ul8shx3ZE+D6OKfs+wv58+vEH7GCUT297e9v2f/XT09PDx7TG7XaL2+0WERHfv3//9+9+5ufbulwun/5u7+379Db8ifQKj+wIV34fbmXvsaFPjroqn8z0AcM6Uvwi7g/gnmNEv3g64BfTBwzpaPGLeCyAe44V/eJK8F/TBwzniPGLeDyAe44Z/TLi+zwe7T+BuxjlBY+jeX5+/vTCBTA6AngHVeP3gQhiNgRwI9Xj94EIYjbSvw/v3VGf8/vdrZx5TtAHvd03E00f0LWzxC/i2ADuOTfIxY/B/GL6gG6dKX4RxwdwzzlCe67Xq1d+P5s+oEtni1/EOQGc9VyxjOkDuvPRN9ns/QG9lUe+tghyUNMHdOWyLNM+kLfy6NcXQQ5o+oCufOTqb5QH8Fb23IYIcjDTB3TlvQEc6YG7lb23I4IcyPQBXXlPAEd7wG7liNsSQQ5i+oDu3PLgHfGB2jKAW8/jLOeWw5o+oDu/eiFk1Ado6wBGiCC7N31Al14ul08P3tF/kDQjgBEiyK5NH9C9I0fvZ7MCGCGC7Nb0AWxkZgAjRJBdmj6AjcwOYIQIsjvTB7CRPQQwQgTZlekD2MheAhghguzG9AFsZE8BjBBBdmH6ADaytwBGiCDTTR/ARvYYwAgRZKrpA9jIXgMYIYJMM30AG9lzACNEkCmmD2Ajew9ghAiyuekD2MgRAhghgmxq+gA2cpQARoggm5k+gI0cKYARIsgmpg9gI0cLYIQI8nTTB7CRIwYwQgR5qukD2MhRAxghgjzN9AFs5MgBjBBBnmL6ADZy9ABGiCAPN30AGzlDACNEkIeaPoCNnCWAESLIw0wfwEbOFMAIEeQhpg9gI2cLYIQIcrfpA9jIGQMYIYLcZfoANnLWAEaIIB82fQAbOXMAI0SQD5k+gI2cPYARIsi7TR/ARlYIYIQI8i7TB7CRVQIYIYLcbPoANrJSACNEkJtMH8BGVgtghAjyS9MHsJEVAxghgvyr6QPYyKoBjBBB/tH0AWxk5QBGiCBXTR/ARlYPYIQI8pPpA9hIAXxXBPmT6QPYSAH8TxFkRLw9/fgDCvDetq95eno6eUkfXK/XWJbl7n9X5fxU4J/sAUAWz8/Pcbvd7v531+v1+DFIQQBRmkciuCzLQ1eO6A8BRHkevRLE+AggECJYmfRXYthGrwJ/7ZZXh6/Xa/pOHmb6ADZSALf5VQSXZUnfyMNMH8BGbv3Zt+ydPXi5XFbPjZ8DnEs/B1iILT/3drvd4vn5uc2gAbhcLhER8f37d88RTsj/sgegHbfbbVMA8R+vr6/ZE3Ay6ZehbOffvg327R0Lmj6AjV17fssrm6yo5wALc7lcPLeF0ggggLL4TRAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABlEUAAZRFAAGURQABl+T+dcsXaDknkjAAAAABJRU5ErkJggg==" alt="" class="flogo"><span class="ftxt"><span class="fname">Aperture Learning</span><span class="fslogan"><em class="o">clarity</em> in <em class="b">every concept</em></span></span></span><span>Adelaide, South Australia · © 2026</span></div></footer>
+
+<script>
+const CONTACT_EMAIL="aperturelearn@gmail.com";
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();const d=new FormData(e.target);
+const body=`Name: ${d.get("n")}\nYear: ${d.get("y")}\nSubject: ${d.get("s")}\n\n${d.get("m")}`;
+location.href=`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Aperture Learning enquiry")}&body=${encodeURIComponent(body)}`;});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+// hero canvas: grid, axes, sine wave, orange tracer
+const cv=document.getElementById("cv"),c=cv.getContext("2d");let W,H,dpr;
+function size(){dpr=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;c.setTransform(dpr,0,0,dpr,0,0)}
+addEventListener("resize",size);size();
+const still=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function draw(t){
+ c.clearRect(0,0,W,H);const g=48;
+ c.lineWidth=1;c.strokeStyle="rgba(42,164,255,.09)";c.beginPath();
+ for(let x=0;x<W;x+=g){c.moveTo(x,0);c.lineTo(x,H)}for(let y=0;y<H;y+=g){c.moveTo(0,y);c.lineTo(W,y)}c.stroke();
+ const cy=H*.5;c.strokeStyle="rgba(255,255,255,.22)";c.beginPath();c.moveTo(0,cy);c.lineTo(W,cy);c.stroke();
+ const A=H*.2,k=.012,ph=t*.0006;
+ const f=x=>cy-A*Math.sin(x*k-ph)*Math.cos(x*k*.31+ph*.4);
+ c.shadowColor="#2aa4ff";c.shadowBlur=14;c.strokeStyle="#2aa4ff";c.lineWidth=2.5;c.beginPath();
+ for(let x=0;x<=W;x+=3){x?c.lineTo(x,f(x)):c.moveTo(x,f(x))}c.stroke();
+ const px=((t*.09)%(W+200))-100,py=f(px);
+ c.shadowBlur=0;c.strokeStyle="rgba(255,138,31,.45)";c.setLineDash([4,6]);c.lineWidth=1;c.beginPath();c.moveTo(px,cy);c.lineTo(px,py);c.stroke();c.setLineDash([]);
+ c.shadowColor="#ff8a1f";c.shadowBlur=22;c.fillStyle="#ff8a1f";c.beginPath();c.arc(px,py,6,0,7);c.fill();c.shadowBlur=0;
+ if(!still)requestAnimationFrame(draw)}
+requestAnimationFrame(draw);
+</script>
+</body>
+</html>
